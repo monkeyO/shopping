@@ -1,0 +1,23 @@
+{{#each products}}
+    <div class="row">
+        {{#each this}}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="/images/{{this.imagePath}}" alt="小熊">
+                    <div class="caption">
+                        <h3>{{this.title}}</h3>
+                        <p class="description">
+                            {{this.description}}
+                        </p>
+                        <div class="clearfix">
+                            <div class="pull-left price">{{this.price}}元</div>
+                            <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">
+                                <i class="glyphicon glyphicon-shopping-cart"></i> 添加到购物车
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}

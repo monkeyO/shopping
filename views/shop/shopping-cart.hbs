@@ -1,0 +1,41 @@
+{{#if products}}
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <ul class="list-group">
+                {{#each products}}
+                    <li class="list-group-item">
+                        <span class="badge">{{this.qty}}</span>
+                        <strong>{{this.item.title}}</strong>
+                        <span class="label label-success">{{this.price}}</span>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                   操作<span class="caret"></span>
+                </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">删除一个</a></li>
+                                <li><a href="#">狠心删除</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <strong>合计:{{totalPrice}}</strong>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <button type="button" class="btn btn-success">去购买</button>
+        </div>
+    </div>
+{{else}}
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <h2>购物车没有任何商品</h2>
+        </div>
+    </div>
+{{/if}}

@@ -1,0 +1,16 @@
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family:"microsoft yahei";
+}
+.thumbnail img{
+  max-height: 150px;
+}
+.thumbnail .description{
+  color: blue;
+}
+.price{
+  font-weight: bold;
+  font-size: 1.15em;
+}
