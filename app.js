@@ -11,7 +11,7 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 
-
+console.log("121");
 var mongoose = require('mongoose');
 mongoose.connect('localhost:27017/shopping');
 require('./config/passport');
